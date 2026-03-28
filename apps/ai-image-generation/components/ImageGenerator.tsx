@@ -106,7 +106,9 @@ export const ImageGenerator = ({ onImageGenerated }: ImageGeneratorProps) => {
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          AI Image Generator
+          Story Panel Generator
+
+
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
