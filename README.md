@@ -5,7 +5,7 @@
 Shcomics lets users describe any comic scene, generate stunning AI visual panels, and store them verifiably on Shelby's hot storage layer with full cryptographic provenance (owner, timestamp, hash).
 
 ## Live Demo
-🔗 https://shcomics-ai-image-generation-846g.vercel.app
+https://shcomics-ai-image-generation-s2i1.vercel.app/
 
 ## Features
 - 🎨 AI comic panel generation
