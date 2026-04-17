@@ -38,7 +38,7 @@ export default function ImageGenerator() {
     }
     try {
       setStatusMsg("Generating your comic panel...");
-      const comicPrompt = `digital comic book illustration, semi-realistic, bold ink outlines, detailed shading, cinematic lighting, dramatic atmosphere, vibrant colors, highly detailed, professional comic art style, dynamic pose: ${prompt}`;
+      const comicPrompt = `Marvel DC comic book panel art style, bold thick black ink outlines, flat cel shading, vivid primary colors, halftone dot shading, speech bubbles, dramatic perspective, printed comic book aesthetic, professional comic book illustration: ${prompt}`;
       const imageBuffer = await generateImage(comicPrompt);
       const blobName = `${prompt.slice(0, 50)}_${Math.random().toString(36).slice(2)}`;
       setStatusMsg("Uploading image to Shelby...");
