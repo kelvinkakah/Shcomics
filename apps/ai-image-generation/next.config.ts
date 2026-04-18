@@ -31,19 +31,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  webpack: (config) => {
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      path: false,
-      crypto: false,
-    };
-    config.externals = [
-      ...(Array.isArray(config.externals) ? config.externals : []),
-      "@shelby-protocol/clay-codes",
-    ];
-    return config;
-  },
 };
 
 export default nextConfig;
