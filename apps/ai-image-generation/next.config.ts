@@ -30,6 +30,7 @@ const nextConfig: NextConfig = {
       config.externals = [
         ...(Array.isArray(config.externals) ? config.externals : []),
         "@shelby-protocol/sdk",
+        "@shelby-protocol/sdk/browser",
       ];
     }
     config.resolve.fallback = {
@@ -37,6 +38,16 @@ const nextConfig: NextConfig = {
       fs: false,
       path: false,
       crypto: false,
+    };
+    config.module = config.module || {};
+    config.module.rules = config.module.rules || [];
+    config.module.rules.push({
+      test: /\.wasm$/,
+      type: "webassembly/async",
+    });
+    config.experiments = {
+      ...config.experiments,
+      asyncWebAssembly: true,
     };
     return config;
   },
