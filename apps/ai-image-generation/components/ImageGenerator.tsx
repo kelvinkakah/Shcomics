@@ -1,6 +1,9 @@
 "use client";
 
-import { type AccountAddress, useWallet } from "@aptos-labs/wallet-adapter-react";
+import {
+  type AccountAddress,
+  useWallet,
+} from "@aptos-labs/wallet-adapter-react";
 import { useState } from "react";
 import { useUploadImageToShelby } from "@/hooks/useUploadImageToShelby";
 import { GeneratedImages } from "./GeneratedImages";
@@ -26,15 +29,22 @@ export default function ImageGenerator() {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [statusMsg, setStatusMsg] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
-  const { uploadImageToShelby, uploadMetadataToShelby, isUploading } = useUploadImageToShelby();
+  const { uploadImageToShelby, uploadMetadataToShelby, isUploading } =
+    useUploadImageToShelby();
   const isProcessing = isGenerating || isUploading;
 
   const buildPrompt = () => {
-    const selectedChars = characters.filter((c) => selectedCharIds.includes(c.id));
-    const charDescriptions = selectedChars.map((c) =>
-      `${c.name} (${c.role}: ${c.appearance}, wearing ${c.costume})`
-    ).join(", ");
-    const charPart = charDescriptions ? `Characters: ${charDescriptions}. ` : "";
+    const selectedChars = characters.filter((c) =>
+      selectedCharIds.includes(c.id),
+    );
+    const charDescriptions = selectedChars
+      .map(
+        (c) => `${c.name} (${c.role}: ${c.appearance}, wearing ${c.costume})`,
+      )
+      .join(", ");
+    const charPart = charDescriptions
+      ? `Characters: ${charDescriptions}. `
+      : "";
     const scenePart = setting ? `Setting: ${setting}. ` : "";
     const actionPart = action ? `Action: ${action}. ` : "";
     const moodPart = `Mood: ${mood}. Time: ${timeOfDay}.`;
@@ -74,7 +84,9 @@ export default function ImageGenerator() {
       const uploadedImage = await uploadImageToShelby(imageBuffer, blobName);
 
       setStatusMsg("Uploading metadata to Shelby...");
-      const selectedChars = characters.filter((c) => selectedCharIds.includes(c.id));
+      const selectedChars = characters.filter((c) =>
+        selectedCharIds.includes(c.id),
+      );
       const metadata = {
         prompt,
         engine: "replicate",
@@ -93,20 +105,76 @@ export default function ImageGenerator() {
       setRefreshTrigger((prev) => prev + 1);
       setAction("");
     } catch (error) {
-      setStatusMsg(error instanceof Error ? error.message : "Failed to generate image");
+      setStatusMsg(
+        error instanceof Error ? error.message : "Failed to generate image",
+      );
     } finally {
       setIsGenerating(false);
     }
   };
 
-  const tickerItems = ["GENERATE", "STORE ON SHELBY", "VERIFY ON CHAIN", "DOWNLOAD", "SHARE YOUR STORY", "APTOS BLOCKCHAIN"];
-  const stripCaptions = ["A hero rises from the blockchain", "The villain steals the artwork", "Shelby secures the proof", "Our hero reclaims the canvas", "The city is saved!", "A new story begins..."];
+  const tickerItems = [
+    "GENERATE",
+    "STORE ON SHELBY",
+    "VERIFY ON CHAIN",
+    "DOWNLOAD",
+    "SHARE YOUR STORY",
+    "APTOS BLOCKCHAIN",
+  ];
+  const stripCaptions = [
+    "A hero rises from the blockchain",
+    "The villain steals the artwork",
+    "Shelby secures the proof",
+    "Our hero reclaims the canvas",
+    "The city is saved!",
+    "A new story begins...",
+  ];
   const stripEmojis = ["💥", "⚡", "🛡️", "🎨", "🌟", "📖"];
   const heroes = [
-    { img: "/Hero1.jpg", name: "Stan The Man", power: "Comic Legend", border: "3px solid #111", bg: "#fff", nameColor: "#111", powerColor: "#E8001C", anim: "heroFloat 4s ease-in-out infinite", zap: true },
-    { img: "/hero2.jpg", name: "Iron Fist", power: "Block Crusher", border: "3px solid #FFD700", bg: "#111", nameColor: "#FFD700", powerColor: "#7F77DD", anim: "villainShake 2s ease-in-out infinite", zap: false },
-    { img: "/hero3.jpg", name: "Wind Rider", power: "Speed Demon", border: "3px solid #111", bg: "#fff", nameColor: "#111", powerColor: "#1D9E75", anim: "sidekickBounce 3s ease-in-out infinite", zap: false },
-    { img: "/hero4.jpg", name: "Moto X", power: "Chain Rider", border: "3px solid #111", bg: "#fff", nameColor: "#111", powerColor: "#E24B4A", anim: "heroFloat 5s ease-in-out infinite", zap: false },
+    {
+      img: "/Hero1.jpg",
+      name: "Stan The Man",
+      power: "Comic Legend",
+      border: "3px solid #111",
+      bg: "#fff",
+      nameColor: "#111",
+      powerColor: "#E8001C",
+      anim: "heroFloat 4s ease-in-out infinite",
+      zap: true,
+    },
+    {
+      img: "/hero2.jpg",
+      name: "Iron Fist",
+      power: "Block Crusher",
+      border: "3px solid #FFD700",
+      bg: "#111",
+      nameColor: "#FFD700",
+      powerColor: "#7F77DD",
+      anim: "villainShake 2s ease-in-out infinite",
+      zap: false,
+    },
+    {
+      img: "/hero3.jpg",
+      name: "Wind Rider",
+      power: "Speed Demon",
+      border: "3px solid #111",
+      bg: "#fff",
+      nameColor: "#111",
+      powerColor: "#1D9E75",
+      anim: "sidekickBounce 3s ease-in-out infinite",
+      zap: false,
+    },
+    {
+      img: "/hero4.jpg",
+      name: "Moto X",
+      power: "Chain Rider",
+      border: "3px solid #111",
+      bg: "#fff",
+      nameColor: "#111",
+      powerColor: "#E24B4A",
+      anim: "heroFloat 5s ease-in-out infinite",
+      zap: false,
+    },
   ];
 
   return (
@@ -154,14 +222,23 @@ export default function ImageGenerator() {
             { e: "🌟", size: 90, top: 10, left: 55, anim: "float0", dur: 8 },
             { e: "⚡", size: 130, top: 50, left: 90, anim: "float1", dur: 12 },
           ].map((item, i) => (
-            <div key={i} className="hero-emoji" style={{ fontSize: `${item.size}px`, opacity: 0.06, top: `${item.top}%`, left: `${item.left}%`, animation: `${item.anim} ${item.dur}s ease-in-out infinite` }}>
+            <div
+              key={i}
+              className="hero-emoji"
+              style={{
+                fontSize: `${item.size}px`,
+                opacity: 0.06,
+                top: `${item.top}%`,
+                left: `${item.left}%`,
+                animation: `${item.anim} ${item.dur}s ease-in-out infinite`,
+              }}
+            >
               {item.e}
             </div>
           ))}
         </div>
 
         <div className="content-wrap">
-
           <div className="section-title">
             <span className="step-badge">STEP 1</span>
             Build Your Characters
@@ -192,7 +269,11 @@ export default function ImageGenerator() {
             </div>
           )}
 
-          <button className="zap-btn" onClick={handleGenerate} disabled={isProcessing}>
+          <button
+            className="zap-btn"
+            onClick={handleGenerate}
+            disabled={isProcessing}
+          >
             <div className="zap-icon">⚡</div>
             {isProcessing
               ? isGenerating
@@ -213,15 +294,41 @@ export default function ImageGenerator() {
           </div>
 
           <div className="footer-note">
-            Every panel is stored verifiably on Shelby &bull; Powered by Replicate &bull; Aptos blockchain
+            Every panel is stored verifiably on Shelby &bull; Powered by
+            Replicate &bull; Aptos blockchain
           </div>
 
-          <div style={{ height: "3px", background: "#111", margin: "24px 0 0" }} />
+          <div
+            style={{ height: "3px", background: "#111", margin: "24px 0 0" }}
+          />
 
-          <div style={{ background: "#E8001C", borderTop: "3px solid #111", borderBottom: "3px solid #111", padding: "10px 0", overflow: "hidden", whiteSpace: "nowrap" }}>
-            <div style={{ display: "inline-flex", gap: "48px", animation: "scrollLeft 18s linear infinite" }}>
+          <div
+            style={{
+              background: "#E8001C",
+              borderTop: "3px solid #111",
+              borderBottom: "3px solid #111",
+              padding: "10px 0",
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <div
+              style={{
+                display: "inline-flex",
+                gap: "48px",
+                animation: "scrollLeft 18s linear infinite",
+              }}
+            >
               {[...tickerItems, ...tickerItems].map((item, i) => (
-                <span key={i} style={{ fontFamily: "'Bangers', cursive", fontSize: "18px", color: i % 2 === 0 ? "#FFD700" : "#fff", letterSpacing: "2px" }}>
+                <span
+                  key={i}
+                  style={{
+                    fontFamily: "'Bangers', cursive",
+                    fontSize: "18px",
+                    color: i % 2 === 0 ? "#FFD700" : "#fff",
+                    letterSpacing: "2px",
+                  }}
+                >
                   {item} {i % 2 === 0 ? "★" : "•"}
                 </span>
               ))}
@@ -229,52 +336,241 @@ export default function ImageGenerator() {
           </div>
 
           <div style={{ padding: "32px 24px 16px" }}>
-            <div style={{ fontFamily: "'Bangers', cursive", fontSize: "26px", color: "#111", letterSpacing: "2px", marginBottom: "24px", display: "flex", alignItems: "center", gap: "10px" }}>
-              <span style={{ fontFamily: "'Bangers', cursive", fontSize: "30px", color: "#E8001C", textShadow: "2px 2px 0 #FFD700, 3px 3px 0 #111", transform: "rotate(-4deg)", display: "inline-block" }}>BAM!</span>
+            <div
+              style={{
+                fontFamily: "'Bangers', cursive",
+                fontSize: "26px",
+                color: "#111",
+                letterSpacing: "2px",
+                marginBottom: "24px",
+                display: "flex",
+                alignItems: "center",
+                gap: "10px",
+              }}
+            >
+              <span
+                style={{
+                  fontFamily: "'Bangers', cursive",
+                  fontSize: "30px",
+                  color: "#E8001C",
+                  textShadow: "2px 2px 0 #FFD700, 3px 3px 0 #111",
+                  transform: "rotate(-4deg)",
+                  display: "inline-block",
+                }}
+              >
+                BAM!
+              </span>
               <span> Meet the Heroes</span>
               <div style={{ flex: 1, height: "3px", background: "#111" }} />
             </div>
-            <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-around", gap: "16px", flexWrap: "wrap", marginBottom: "24px" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "flex-end",
+                justifyContent: "space-around",
+                gap: "16px",
+                flexWrap: "wrap",
+                marginBottom: "24px",
+              }}
+            >
               {heroes.map((hero, i) => (
-                <div key={i} className="hero-card" style={{ border: hero.border, background: hero.bg, animation: hero.anim }}>
+                <div
+                  key={i}
+                  className="hero-card"
+                  style={{
+                    border: hero.border,
+                    background: hero.bg,
+                    animation: hero.anim,
+                  }}
+                >
                   {hero.zap && (
-                    <div style={{ position: "absolute", top: "-18px", right: "-14px", fontFamily: "'Bangers', cursive", fontSize: "22px", color: "#E8001C", textShadow: "1px 1px 0 #FFD700", animation: "zapPop 3s ease-in-out infinite" }}>ZAP!</div>
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "-18px",
+                        right: "-14px",
+                        fontFamily: "'Bangers', cursive",
+                        fontSize: "22px",
+                        color: "#E8001C",
+                        textShadow: "1px 1px 0 #FFD700",
+                        animation: "zapPop 3s ease-in-out infinite",
+                      }}
+                    >
+                      ZAP!
+                    </div>
                   )}
                   <img src={hero.img} alt={hero.name} className="hero-img" />
-                  <div style={{ fontFamily: "'Bangers', cursive", fontSize: "16px", color: hero.nameColor, letterSpacing: "1px" }}>{hero.name}</div>
-                  <div style={{ fontSize: "10px", fontWeight: 700, color: hero.powerColor, textTransform: "uppercase" }}>{hero.power}</div>
+                  <div
+                    style={{
+                      fontFamily: "'Bangers', cursive",
+                      fontSize: "16px",
+                      color: hero.nameColor,
+                      letterSpacing: "1px",
+                    }}
+                  >
+                    {hero.name}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: "10px",
+                      fontWeight: 700,
+                      color: hero.powerColor,
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    {hero.power}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div style={{ background: "#111", padding: "16px 24px", overflow: "hidden" }}>
-            <div style={{ fontFamily: "'Bangers', cursive", fontSize: "20px", color: "#FFD700", letterSpacing: "2px", marginBottom: "12px" }}>★ COMIC STRIP TICKER ★</div>
-            <div style={{ display: "flex", animation: "scrollLeft 22s linear infinite", width: "max-content" }}>
+          <div
+            style={{
+              background: "#111",
+              padding: "16px 24px",
+              overflow: "hidden",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "'Bangers', cursive",
+                fontSize: "20px",
+                color: "#FFD700",
+                letterSpacing: "2px",
+                marginBottom: "12px",
+              }}
+            >
+              ★ COMIC STRIP TICKER ★
+            </div>
+            <div
+              style={{
+                display: "flex",
+                animation: "scrollLeft 22s linear infinite",
+                width: "max-content",
+              }}
+            >
               {[...stripCaptions, ...stripCaptions].map((caption, i) => (
-                <div key={i} style={{ width: "140px", height: "100px", border: "3px solid #FFD700", background: "#FFF9E6", flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "flex-end", flexDirection: "column", position: "relative" }}>
-                  <div style={{ position: "absolute", top: "4px", left: "6px", fontFamily: "'Bangers', cursive", fontSize: "13px", color: "#E8001C" }}>{(i % 6) + 1}</div>
-                  <div style={{ flex: 1, display: "flex", alignItems: "center", justifyContent: "center", fontSize: "28px" }}>{stripEmojis[i % 6]}</div>
-                  <div style={{ background: "#111", color: "#FFD700", fontFamily: "'Bangers', cursive", fontSize: "9px", padding: "3px 4px", textAlign: "center", letterSpacing: "1px", width: "100%", boxSizing: "border-box" as const }}>{caption}</div>
+                <div
+                  key={i}
+                  style={{
+                    width: "140px",
+                    height: "100px",
+                    border: "3px solid #FFD700",
+                    background: "#FFF9E6",
+                    flexShrink: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "flex-end",
+                    flexDirection: "column",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: "4px",
+                      left: "6px",
+                      fontFamily: "'Bangers', cursive",
+                      fontSize: "13px",
+                      color: "#E8001C",
+                    }}
+                  >
+                    {(i % 6) + 1}
+                  </div>
+                  <div
+                    style={{
+                      flex: 1,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "28px",
+                    }}
+                  >
+                    {stripEmojis[i % 6]}
+                  </div>
+                  <div
+                    style={{
+                      background: "#111",
+                      color: "#FFD700",
+                      fontFamily: "'Bangers', cursive",
+                      fontSize: "9px",
+                      padding: "3px 4px",
+                      textAlign: "center",
+                      letterSpacing: "1px",
+                      width: "100%",
+                      boxSizing: "border-box" as const,
+                    }}
+                  >
+                    {caption}
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px", padding: "20px 24px 32px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(3, 1fr)",
+              gap: "12px",
+              padding: "20px 24px 32px",
+            }}
+          >
             {[
-              { icon: "⛓", title: "On-Chain Proof", desc: "Every panel gets a cryptographic hash stored permanently on Aptos blockchain" },
-              { icon: "⚡", title: "Instant Storage", desc: "Shelby's hot storage layer serves your comics globally with sub-second reads" },
-              { icon: "🎨", title: "True Ownership", desc: "Your wallet address is cryptographically tied to every panel you create" },
+              {
+                icon: "⛓",
+                title: "On-Chain Proof",
+                desc: "Every panel gets a cryptographic hash stored permanently on Aptos blockchain",
+              },
+              {
+                icon: "⚡",
+                title: "Instant Storage",
+                desc: "Shelby's hot storage layer serves your comics globally with sub-second reads",
+              },
+              {
+                icon: "🎨",
+                title: "True Ownership",
+                desc: "Your wallet address is cryptographically tied to every panel you create",
+              },
             ].map((fact, i) => (
-              <div key={i} style={{ border: "3px solid #111", borderRadius: "6px", background: "#fff", padding: "12px", textAlign: "center" }}>
-                <div style={{ fontSize: "28px", marginBottom: "6px" }}>{fact.icon}</div>
-                <div style={{ fontFamily: "'Bangers', cursive", fontSize: "16px", color: "#E8001C", letterSpacing: "1px", marginBottom: "4px" }}>{fact.title}</div>
-                <div style={{ fontSize: "10px", fontWeight: 700, color: "#555", lineHeight: 1.4 }}>{fact.desc}</div>
+              <div
+                key={i}
+                style={{
+                  border: "3px solid #111",
+                  borderRadius: "6px",
+                  background: "#fff",
+                  padding: "12px",
+                  textAlign: "center",
+                }}
+              >
+                <div style={{ fontSize: "28px", marginBottom: "6px" }}>
+                  {fact.icon}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Bangers', cursive",
+                    fontSize: "16px",
+                    color: "#E8001C",
+                    letterSpacing: "1px",
+                    marginBottom: "4px",
+                  }}
+                >
+                  {fact.title}
+                </div>
+                <div
+                  style={{
+                    fontSize: "10px",
+                    fontWeight: 700,
+                    color: "#555",
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {fact.desc}
+                </div>
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </>
