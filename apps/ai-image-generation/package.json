@@ -23,7 +23,8 @@
     "node-fetch": "^3.3.2",
     "openai": "^6.6.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "replicate": "^1.4.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.3",

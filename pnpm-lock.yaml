@@ -40,7 +40,7 @@ importers:
         version: 8.2.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@telegram-apps/bridge@1.9.2)(@types/react@18.3.27)(@wallet-standard/core@1.1.1)(react@19.2.4)
       '@shelby-protocol/sdk':
         specifier: latest
-        version: 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+        version: 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
       '@shelby-protocol/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -65,6 +65,9 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.2.4(react@19.2.4)
+      replicate:
+        specifier: ^1.4.0
+        version: 1.4.0
     devDependencies:
       '@types/node':
         specifier: ^22.15.3
@@ -92,7 +95,7 @@ importers:
         version: 8.2.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@telegram-apps/bridge@1.9.2)(@types/react@18.3.27)(@wallet-standard/core@1.1.1)(react@19.2.4)
       '@shelby-protocol/sdk':
         specifier: latest
-        version: 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+        version: 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
       '@shelby-protocol/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -123,7 +126,7 @@ importers:
         version: 5.2.1(got@11.8.6)
       '@shelby-protocol/sdk':
         specifier: latest
-        version: 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+        version: 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
     devDependencies:
       '@biomejs/biome':
         specifier: 2.2.4
@@ -230,7 +233,7 @@ importers:
         version: 5.2.1(got@11.8.6)
       '@shelby-protocol/sdk':
         specifier: latest
-        version: 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+        version: 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
     devDependencies:
       '@biomejs/biome':
         specifier: 2.2.4
@@ -249,13 +252,13 @@ importers:
     dependencies:
       '@shelby-protocol/react':
         specifier: latest
-        version: 0.0.5(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@shelby-protocol/sdk@0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6)))(@tanstack/react-query@5.90.20(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
+        version: 2.0.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@shelby-protocol/sdk@0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6)))(@tanstack/react-query@5.90.20(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
       '@shelby-protocol/sdk':
         specifier: latest
-        version: 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+        version: 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
       '@shelby-protocol/solana-kit':
         specifier: latest
-        version: 0.2.0(@wallet-standard/core@1.1.1)(bs58@6.0.0)(bufferutil@4.1.0)(got@11.8.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(utf-8-validate@5.0.10)
+        version: 0.2.7(@wallet-standard/core@1.1.1)(bs58@6.0.0)(bufferutil@4.1.0)(got@11.8.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@solana/client':
         specifier: ^1.2.0
         version: 1.7.0(@solana/sysvars@5.5.1(typescript@5.9.3))(@types/react@19.2.10)(bufferutil@4.1.0)(react@19.2.4)(typescript@5.9.3)(use-sync-external-store@1.6.0(react@19.2.4))(utf-8-validate@5.0.10)
@@ -319,13 +322,13 @@ importers:
         version: 0.31.1(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@shelby-protocol/react':
         specifier: latest
-        version: 0.0.5(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@shelby-protocol/sdk@0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6)))(@tanstack/react-query@5.90.20(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
+        version: 2.0.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@shelby-protocol/sdk@0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6)))(@tanstack/react-query@5.90.20(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)
       '@shelby-protocol/sdk':
         specifier: latest
-        version: 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+        version: 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
       '@shelby-protocol/solana-kit':
         specifier: latest
-        version: 0.2.0(@wallet-standard/core@1.1.1)(bs58@6.0.0)(bufferutil@4.1.0)(got@11.8.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(utf-8-validate@5.0.10)
+        version: 0.2.7(@wallet-standard/core@1.1.1)(bs58@6.0.0)(bufferutil@4.1.0)(got@11.8.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@solana/client':
         specifier: ^1.2.0
         version: 1.7.0(@solana/sysvars@5.5.1(typescript@5.9.3))(@types/react@19.2.10)(bufferutil@4.1.0)(react@19.2.4)(typescript@5.9.3)(use-sync-external-store@1.6.0(react@19.2.4))(utf-8-validate@5.0.10)
@@ -398,7 +401,7 @@ importers:
         version: 5.2.1(got@11.8.6)
       '@shelby-protocol/sdk':
         specifier: latest
-        version: 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+        version: 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
     devDependencies:
       '@biomejs/biome':
         specifier: 2.2.4
@@ -1302,9 +1305,11 @@ packages:
 
   '@metamask/sdk-analytics@0.0.5':
     resolution: {integrity: sha512-fDah+keS1RjSUlC8GmYXvx6Y26s3Ax1U9hGpWb6GSY5SAdmTSIqp2CvYy6yW0WgLhnYhW+6xERuD0eVqV63QIQ==}
+    deprecated: No longer maintained, superseded by @metamask/connect-analytics
 
   '@metamask/sdk-communication-layer@0.33.1':
     resolution: {integrity: sha512-0bI9hkysxcfbZ/lk0T2+aKVo1j0ynQVTuB3sJ5ssPWlz+Z3VwveCkP1O7EVu1tsVVCb0YV5WxK9zmURu2FIiaA==}
+    deprecated: No longer maintained, superseded by https://docs.metamask.io/metamask-connect
     peerDependencies:
       cross-fetch: ^4.0.0
       eciesjs: '*'
@@ -1314,9 +1319,11 @@ packages:
 
   '@metamask/sdk-install-modal-web@0.32.1':
     resolution: {integrity: sha512-MGmAo6qSjf1tuYXhCu2EZLftq+DSt5Z7fsIKr2P+lDgdTPWgLfZB1tJKzNcwKKOdf6q9Qmmxn7lJuI/gq5LrKw==}
+    deprecated: No longer maintained, superseded by https://docs.metamask.io/metamask-connect
 
   '@metamask/sdk@0.34.0':
     resolution: {integrity: sha512-8dkJUShZ5zFqYjNmhJaqKgDzZVne+F2rNjMQJ3pxs89n3oOUNuJ8dsTo08Grf9vlQ6Ldpdt2RTwqbrxKWyyqlw==}
+    deprecated: No longer maintained, superseded by https://docs.metamask.io/metamask-connect
 
   '@metamask/superstruct@3.2.1':
     resolution: {integrity: sha512-fLgJnDOXFmuVlB38rUN5SmU7hAFQcCjrg3Vrxz67KTY7YHFnSNEKvX4avmEBdOI0yTCxZjwMCFEqsC8k2+Wd3g==}
@@ -2028,12 +2035,12 @@ packages:
       '@aptos-labs/wallet-adapter-react':
         optional: true
 
-  '@shelby-protocol/react@0.0.5':
-    resolution: {integrity: sha512-Y4oU/eOUlClWZmthXPiPKB9Umw66SJXKvyscbfGEprUBSoyvPsrEHsjOhuGlYmkXwWQe68OIZFO6p91xJPsVTA==}
+  '@shelby-protocol/react@2.0.0':
+    resolution: {integrity: sha512-Ucz2Yq52/VDghCcWbF98JiDkAxsMdO3dTwQKoYdf4mH21nSv+rTqn7K4R0DkRFgtO77X/zNcpzr98qyLPr3qyQ==}
     peerDependencies:
-      '@aptos-labs/ts-sdk': '>=5.0.0'
+      '@aptos-labs/ts-sdk': ^5.2.1 || ^6.0.0
       '@aptos-labs/wallet-adapter-react': ^6.0.0 || ^7.0.0
-      '@shelby-protocol/sdk': 0.0.9
+      '@shelby-protocol/sdk': 0.3.0
       '@tanstack/react-query': '>=5.0.0'
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
@@ -2050,8 +2057,13 @@ packages:
     peerDependencies:
       '@aptos-labs/ts-sdk': ^2.0.1 || ^3.0.0 || ^4.0.0 || ^5.0.0
 
-  '@shelby-protocol/solana-kit@0.2.0':
-    resolution: {integrity: sha512-lKIBrVNZxeIod1RlG4VM+YcBbZIkIWLp9sBlae7H+EV7dzE/t5ECUuKb9MrH1a/S213rAnrV8OpxDazoYp39vw==}
+  '@shelby-protocol/sdk@0.3.0':
+    resolution: {integrity: sha512-eIwi5AlwPFw9huZ3llLyHFSH7flsbOF7LUkFwPxtEX2qqmt1HyYa0TVC+dcgSS2CxuHoKm/YdH8zYwt6oN+aAQ==}
+    peerDependencies:
+      '@aptos-labs/ts-sdk': ^5.2.1 || ^6.0.0
+
+  '@shelby-protocol/solana-kit@0.2.7':
+    resolution: {integrity: sha512-vNdmalk1f5mqOZqaxqqAo5fbUAlGxoUpVcdVgSYg0YIbUgqvK9Q16QeVS02bCIQOjAsgLICd+H57Vk0/f9IqkQ==}
     peerDependencies:
       react: ^18.0.0 || ^19.0.0
       react-dom: ^18.0.0 || ^19.0.0
@@ -3314,6 +3326,10 @@ packages:
       zod:
         optional: true
 
+  abort-controller@3.0.0:
+    resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
+    engines: {node: '>=6.5'}
+
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -3945,6 +3961,10 @@ packages:
     resolution: {integrity: sha512-U1wulmetNymijEhpSEQ7Ct/P/Jw9/e7R1j5XIbPRydgV2DjLVMsULDlNksq3RQnFgKoLlZf88ijYtWEXcPa07A==}
     engines: {node: '>=14.0.0'}
 
+  event-target-shim@5.0.1:
+    resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}
+    engines: {node: '>=6'}
+
   eventemitter2@6.4.9:
     resolution: {integrity: sha512-JEPTiaOt9f04oa6NOkc4aH+nVp5I3wEjpHbIPqfgCdD5v5bUzy7xQqwcVO2aDQgOWhI28da57HksMrzK9HlRxg==}
 
@@ -3953,6 +3973,10 @@ packages:
 
   eventemitter3@5.0.1:
     resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
+
+  events@3.3.0:
+    resolution: {integrity: sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==}
+    engines: {node: '>=0.8.x'}
 
   expect-type@1.3.0:
     resolution: {integrity: sha512-knvyeauYhqjOYvQ66MznSMs83wmHrCycNEN6Ao+2AeYEfxUIkuiVxdEa1qlGEPK+We3n0THiDciYSsCcgW/DoA==}
@@ -4871,6 +4895,10 @@ packages:
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
+  process@0.11.10:
+    resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==}
+    engines: {node: '>= 0.6.0'}
+
   prompts@2.4.2:
     resolution: {integrity: sha512-NxNv/kLguCA7p3jE8oL2aEBsrJWgAakBpgmgK6lpPWV+WuOmY6r2/zbAVnP+T8bQlA0nzHXSJSJW0Hq7ylaD2Q==}
     engines: {node: '>= 6'}
@@ -4967,6 +4995,10 @@ packages:
     resolution: {integrity: sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==}
     engines: {node: '>= 6'}
 
+  readable-stream@4.7.0:
+    resolution: {integrity: sha512-oIGGmcpTLwPga8Bn6/Z75SVaH1z5dUut2ibSyAMVhmUggWpmDn2dapB0n7f8nwaSiRtepAsfJyfXIO5DCVAODg==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+
   reflect.getprototypeof@1.0.10:
     resolution: {integrity: sha512-00o4I+DVrefhv+nX0ulyi3biSHCPDe+yLv5o/p6d/UVlirijB8E16FtfwSAi4g3tcqrQ4lRAqQSoFEZJehYEcw==}
     engines: {node: '>= 0.4'}
@@ -4974,6 +5006,10 @@ packages:
   regexp.prototype.flags@1.5.4:
     resolution: {integrity: sha512-dYqgNSZbDwkaJ2ceRd9ojCGjBq+mOm9LmtXnAnEGyHhN/5R7iDW2TRw3h+o/jCFxus3P2LfWIIiwowAjANm7IA==}
     engines: {node: '>= 0.4'}
+
+  replicate@1.4.0:
+    resolution: {integrity: sha512-1ufKejfUVz/azy+5TnzQP7U1+MHVWZ6psnQ06az8byUUnRhT+DZ/MvewzB1NQYBVMgNKR7xPDtTwlcP5nv/5+w==}
+    engines: {git: '>=2.11.0', node: '>=18.0.0', npm: '>=7.19.0', yarn: '>=1.7.0'}
 
   resolve-alpn@1.2.1:
     resolution: {integrity: sha512-0a1F4l73/ZFZOakJnQ3FvkJ2+gSTQWz/r2KE5OdDY0TxPm5h4GkqkWWfM47T7HsbnOtcJVEF4epCVy6u7Q3K+g==}
@@ -7227,10 +7263,10 @@ snapshots:
       react-dom: 19.2.4(react@19.2.4)
       typescript: 5.9.3
 
-  '@shelby-protocol/react@0.0.5(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@shelby-protocol/sdk@0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6)))(@tanstack/react-query@5.90.20(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)':
+  '@shelby-protocol/react@2.0.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@shelby-protocol/sdk@0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6)))(@tanstack/react-query@5.90.20(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)':
     dependencies:
       '@aptos-labs/ts-sdk': 5.2.1(got@11.8.6)
-      '@shelby-protocol/sdk': 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+      '@shelby-protocol/sdk': 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
       '@tanstack/react-query': 5.90.20(react@19.2.4)
       p-limit: 7.2.0
       react: 19.2.4
@@ -7250,13 +7286,24 @@ snapshots:
       p-limit: 7.1.1
       zod: 3.25.76
 
-  '@shelby-protocol/solana-kit@0.2.0(@wallet-standard/core@1.1.1)(bs58@6.0.0)(bufferutil@4.1.0)(got@11.8.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(utf-8-validate@5.0.10)':
+  '@shelby-protocol/sdk@0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))':
+    dependencies:
+      '@aptos-labs/ts-sdk': 5.2.1(got@11.8.6)
+      '@shelby-protocol/clay-codes': 0.0.2
+      '@shelby-protocol/reed-solomon': 0.0.1
+      graphql: 16.12.0
+      graphql-request: 7.4.0(graphql@16.12.0)
+      graphql-tag: 2.12.6(graphql@16.12.0)
+      p-limit: 7.1.1
+      zod: 3.25.76
+
+  '@shelby-protocol/solana-kit@0.2.7(@wallet-standard/core@1.1.1)(bs58@6.0.0)(bufferutil@4.1.0)(got@11.8.6)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(typescript@5.9.3)(utf-8-validate@5.0.10)':
     dependencies:
       '@aptos-labs/derived-wallet-solana': 0.12.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@wallet-standard/core@1.1.1)(bs58@6.0.0)(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
       '@aptos-labs/gas-station-client': 2.0.3(got@11.8.6)
       '@aptos-labs/ts-sdk': 5.2.1(got@11.8.6)
       '@aptos-labs/wallet-standard': 0.5.2(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))(@wallet-standard/core@1.1.1)
-      '@shelby-protocol/sdk': 0.0.9(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
+      '@shelby-protocol/sdk': 0.3.0(@aptos-labs/ts-sdk@5.2.1(got@11.8.6))
       '@solana/wallet-standard-features': 1.3.0
       '@solana/web3.js': 1.98.4(bufferutil@4.1.0)(typescript@5.9.3)(utf-8-validate@5.0.10)
     optionalDependencies:
@@ -8681,6 +8728,11 @@ snapshots:
       typescript: 5.9.3
       zod: 4.3.5
 
+  abort-controller@3.0.0:
+    dependencies:
+      event-target-shim: 5.0.1
+    optional: true
+
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
       acorn: 8.15.0
@@ -9282,7 +9334,7 @@ snapshots:
       eslint: 9.39.2(jiti@2.6.1)
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-react: 7.37.5(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-react-hooks: 7.0.1(eslint@9.39.2(jiti@2.6.1))
@@ -9335,7 +9387,7 @@ snapshots:
       tinyglobby: 0.2.15
       unrs-resolver: 1.11.1
     optionalDependencies:
-      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
+      eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1))
     transitivePeerDependencies:
       - supports-color
 
@@ -9375,7 +9427,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.53.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -9579,11 +9631,17 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
+  event-target-shim@5.0.1:
+    optional: true
+
   eventemitter2@6.4.9: {}
 
   eventemitter3@4.0.7: {}
 
   eventemitter3@5.0.1: {}
+
+  events@3.3.0:
+    optional: true
 
   expect-type@1.3.0: {}
 
@@ -10429,6 +10487,9 @@ snapshots:
 
   process-nextick-args@2.0.1: {}
 
+  process@0.11.10:
+    optional: true
+
   prompts@2.4.2:
     dependencies:
       kleur: 3.0.3
@@ -10540,6 +10601,15 @@ snapshots:
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
 
+  readable-stream@4.7.0:
+    dependencies:
+      abort-controller: 3.0.0
+      buffer: 6.0.3
+      events: 3.3.0
+      process: 0.11.10
+      string_decoder: 1.3.0
+    optional: true
+
   reflect.getprototypeof@1.0.10:
     dependencies:
       call-bind: 1.0.8
@@ -10559,6 +10629,10 @@ snapshots:
       get-proto: 1.0.1
       gopd: 1.2.0
       set-function-name: 2.0.2
+
+  replicate@1.4.0:
+    optionalDependencies:
+      readable-stream: 4.7.0
 
   resolve-alpn@1.2.1: {}
 
