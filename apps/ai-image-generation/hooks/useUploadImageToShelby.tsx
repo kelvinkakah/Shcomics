@@ -134,7 +134,7 @@ const generateCommitment = async (
   blobName: string,
   account: AccountInfo,
 ) => {
-  const provider = await ClayErasureCodingProvider.create();
+  const provider = await ClayErasureCodingProvider.create(undefined);
   // 1. Generate commitments for the image
   const commitments = await generateCommitments(provider, data);
 
